@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Jespanag</Authors>
+    <Company>Dotnetsafer</Company>
+    <Description>A simple and lightweight extension that allows you to safely store data locally.</Description>
+    <Copyright>Dotnetsafer</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

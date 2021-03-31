@@ -71,26 +71,24 @@ namespace SecureLocalStorage
 
         public void Clear()
         
-         => File.Delete(Config.StoragePath);
+         => File.Delete(Path.Combine(Config.StoragePath, "default"));
         
 
         public bool Exists()
-            => File.Exists(Config.StoragePath);
+            => File.Exists(Path.Combine(Config.StoragePath, "default"));
 
         public bool Exists(string key)
             => StoredData.ContainsKey(key);
 
         public string Get(string key)
-        {
-            StoredData.TryGetValue(key, out var value);
-            return value;
-        }
+        
+            => !StoredData.TryGetValue(key, out var value) ? default : JsonConvert.DeserializeObject<string>(value ?? string.Empty);
+        
 
         public T Get<T>(string key)
-        {
-            StoredData.TryGetValue(key, out var value);
-            return JsonConvert.DeserializeObject<T>(value);
-        }
+        
+            => !StoredData.TryGetValue(key, out var value) ? default : JsonConvert.DeserializeObject<T>(value ?? string.Empty);
+        
 
         public IReadOnlyCollection<string> Keys()
         
@@ -105,6 +103,8 @@ namespace SecureLocalStorage
 
         public void Set<T>(string key, T data)
         {
+            if(Exists(key))
+                Remove(key);
             StoredData.Add(key,JsonConvert.SerializeObject(data));
             Write();
         }
