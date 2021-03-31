@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D0B257F-C102-4EB0-81D0-9ADB1DF6E650}"
 	ProjectSection(SolutionItems) = preProject
 		Blobs\SecureLocal.png = Blobs\SecureLocal.png
+		Blobs\SecureLocalSmall.png = Blobs\SecureLocalSmall.png
 	EndProjectSection
 EndProject
 Global
