@@ -24,6 +24,7 @@
     <None Include="..\..\..\..\Downloads\SecureLocal.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
