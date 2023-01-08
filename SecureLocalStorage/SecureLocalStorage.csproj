@@ -3,13 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Jespanag</Authors>
-    <Company>Dotnetsafer</Company>
+    <Authors>jespanag</Authors>
+    <Company>ByteHide</Company>
+    <Version>2.0.0</Version>
     <Description>A simple and lightweight extension for .NET that allows you to safely store data locally.</Description>
-    <Copyright>Dotnetsafer</Copyright>
+    <Copyright>ByteHide</Copyright>
+    <ApplicationIcon>../Blobs/SecureLocal.ico</ApplicationIcon>
     <RepositoryUrl>https://github.com/dotnetsafer/SecureLocalStorage</RepositoryUrl>
     <RepositoryType>SecureLocalStorage</RepositoryType>
-    <PackageTags>Dotnetsafer, dotnet, security, local storage, storage</PackageTags>
+    <PackageTags>ByteHide, dotnet, security, local storage, storage</PackageTags>
     <PackageProjectUrl>https://github.com/dotnetsafer/SecureLocalStorage</PackageProjectUrl>
   </PropertyGroup>
 
@@ -19,6 +21,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="DeviceId" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
