@@ -7,25 +7,24 @@
     <Company>Dotnetsafer</Company>
     <Description>A simple and lightweight extension for .NET that allows you to safely store data locally.</Description>
     <Copyright>Dotnetsafer</Copyright>
-    <PackageIcon>SecureLocal.png</PackageIcon>
     <RepositoryUrl>https://github.com/dotnetsafer/SecureLocalStorage</RepositoryUrl>
     <RepositoryType>SecureLocalStorage</RepositoryType>
     <PackageTags>Dotnetsafer, dotnet, security, local storage, storage</PackageTags>
     <PackageProjectUrl>https://github.com/dotnetsafer/SecureLocalStorage</PackageProjectUrl>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DeviceId" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="5.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\SecureLocal.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+
 
 </Project>
