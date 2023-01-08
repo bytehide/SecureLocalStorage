@@ -12,12 +12,19 @@ Use the nuget package manager to install [SecureLocalStorage.](https://www.nuget
 
 _Package Manager:_
 ```csharp
-Install-Package SecureLocalStorage -Version 1.0.0
+Install-Package SecureLocalStorage -Version 2.0.0
 ```
 _.NET CLI:_
 ```csharp
-dotnet add package SecureLocalStorage --version 1.0.0
+dotnet add package SecureLocalStorage --version 2.0.0
 ```
+
+
+**Caveat:**
+
+Version 1 does not support MacOs and Linux, so please upgrade to version 2 if you are encrypting local data in a cross-platform project.
+
+Since version 2, both Mac and Linux and Windows have the ability to store fully encrypted local files and data on the machine where your software runs.
 
 ## Simple Usage
 
