@@ -9,7 +9,7 @@ namespace SecureLocalStorage
         public CustomLocalStorageConfig(string defaultPath, string applicationName)
         {
             DefaultPath = defaultPath ?? Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            ApplicationName = ApplicationName;
+            ApplicationName = applicationName;
             StoragePath = Path.Combine(DefaultPath, applicationName);
         }
 
